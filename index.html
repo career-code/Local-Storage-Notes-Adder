@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Day 11 Home Task</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        h1 {
+            color: #495057;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #noteInput {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 2px solid #ced4da;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+            outline: none;
+        }
+
+        #noteInput:focus {
+            border-color: #3498db;
+        }
+
+        button {
+            padding: 12px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2185d0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: scale(1.02);
+        }
+
+        li button.delete {
+            background-color: #e74c3c;
+        }
+
+        li button.delete:hover {
+            background-color: #c0392b;
+        }
+
+        /* Responsive styling */
+        @media screen and (max-width: 600px) {
+            li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Local Storage Notes</h1>
+
+    <input type="text" id="noteInput" placeholder="Enter your note">
+    <button onclick="addNote()">Add Note</button>
+
+    <ul id="noteList"></ul>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
